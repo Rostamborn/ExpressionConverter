@@ -8,8 +8,5 @@ in order for the program to work we need
 to install 2 modules: **treelib** and **pick**
 > pip install treelib pick
 
-then you can run the program by:
-> python -m ExpressionConverter
-
-or if you face unintended errors, run the **main.py** module:
+run the **main.py** module in order to run the program:
 > python main.py
