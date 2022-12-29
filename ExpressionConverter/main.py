@@ -12,7 +12,8 @@ def main():
         print("Invald Error")
         exit()
     elif expression[0] in operators:
-        result_expressoins = (c.pre_to_in(expression), c.pre_to_post)
+        result_expressoins = (c.pre_to_in(expression),
+                              c.pre_to_post(expression))
         postfix = c.pre_to_post(expression)
     elif expression[-1] in operators:
         result_expressoins = (c.post_to_pre(expression),
