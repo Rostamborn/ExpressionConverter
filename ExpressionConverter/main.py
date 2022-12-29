@@ -1,5 +1,6 @@
 from TreePlot import generate
 import converter as c
+from sys import exit
 
 
 def main():
@@ -7,7 +8,10 @@ def main():
     operators = "+-*/^"
     postfix = ""
 
-    if expression[0] in operators:
+    if (expression[0] in operators) and (expression[-1] in operators):
+        print("Invald Error")
+        exit()
+    elif expression[0] in operators:
         result_expressoins = (c.pre_to_in(expression), c.pre_to_post)
         postfix = c.pre_to_post(expression)
     elif expression[-1] in operators:
